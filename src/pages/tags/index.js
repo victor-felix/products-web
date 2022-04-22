@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function tags() {
+export default function Tags() {
   const classes = useStyles();
   const confirm = useConfirm();
   const { loadingShowed } = useLoading();
@@ -274,5 +274,3 @@ function tags() {
     </>
   );
 }
-
-export default tags;

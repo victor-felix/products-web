@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function products() {
+export default function Products() {
   const classes = useStyles();
   const confirm = useConfirm();
   const { loadingShowed } = useLoading();
@@ -251,5 +251,3 @@ function products() {
     </>
   );
 }
-
-export default products;

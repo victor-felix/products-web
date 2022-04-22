@@ -5,6 +5,7 @@ import {
   Brightness7 as SunIcon,
   Brightness2 as MoonIcon,
 } from '@material-ui/icons';
+import PropTypes from 'prop-types';
 
 import { useTheme } from '~/hooks/theme';
 
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DenseAppBar() {
+export default function DenseAppBar({ functionality }) {
   const classes = useStyles();
   const { darkMode, updateDarkMode } = useTheme();
 
@@ -31,7 +32,7 @@ export default function DenseAppBar() {
         <Toolbar variant="dense" className={classes.toolbar}>
           <div>
             <Typography variant="h6" color="inherit">
-              Produtos
+              {functionality}
             </Typography>
           </div>
           <IconButton
@@ -48,3 +49,7 @@ export default function DenseAppBar() {
     </div>
   );
 }
+
+DenseAppBar.propTypes = {
+  functionality: PropTypes.string.isRequired,
+};
